@@ -5,3 +5,7 @@ main {
 .rating span {
   margin: 0.1rem;
 }
+
+.btn-block {
+  width: 100%;
+}
