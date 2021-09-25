@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "MERN shopping cart for store",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/D-Skr/MERN-skill-store#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
