@@ -1,0 +1,23 @@
+{
+  "name": "mern-skill-store",
+  "version": "1.0.0",
+  "description": "MERN shopping cart for store",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Skr/MERN-skill-store.git"
+  },
+  "author": "Dmitrii S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D-Skr/MERN-skill-store/issues"
+  },
+  "homepage": "https://github.com/D-Skr/MERN-skill-store#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
