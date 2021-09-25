@@ -2,7 +2,7 @@
 
 Capstone project for Per Scholas React Course
 
-MongoDB
+MongoDB + mongoose
 ExpressJS
 React
 NodeJS
