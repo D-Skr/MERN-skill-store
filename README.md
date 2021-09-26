@@ -4,7 +4,7 @@ Capstone project for Per Scholas React Course
 
 MongoDB + mongoose
 ExpressJS
-React
+React + Redux
 NodeJS
 
 Rouiting:
