@@ -7,7 +7,7 @@ import {
 
 export const listProducts = () => async (dispatch) => {
     try {
-        dispatch({ PRODUCT_LIST_REQUEST })
+        dispatch({ type: PRODUCT_LIST_REQUEST })
 
         const { data } = await axios.get('/api/products')
 
