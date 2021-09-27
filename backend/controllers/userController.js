@@ -23,12 +23,53 @@ const authUser = asyncHandler(async (req, res) => {
     }
 })
 
+//Register a new user
+//POST /api/users
+//Public access
+const registerUser = asyncHandler(async (req, res) => {
+    const { name, email, password } = req.body
+
+    const userExists = await User.findOne({ email })
+
+    if (userExists) {
+        res.status(400).json({ messsage: 'User already exists' })
+    }
+
+    const user = await User.create({
+        name,
+        email,
+        password
+    })
+
+    if (user) {
+        res.status(201).json({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user._id)
+        })
+    } else {
+        res.status(400).json({ messsage: 'Invalid user data' })
+    }
+})
 
 //Get user profile
 //GET /api/users/profile
 //Private access
 const getUserProfile = asyncHandler(async (req, res) => {
-    res.send('Success')
+    const user = await User.findById(req.user._id)
+
+    if (user) {
+        res.json({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin
+        })
+    } else {
+        res.status(404).json({ messsage: 'User not found' })
+    }
     // const user = await User.findById({ req.user._id })
 
     // if (user && (await user.matchPassword(password))) {
@@ -44,4 +85,4 @@ const getUserProfile = asyncHandler(async (req, res) => {
     // }
 })
 
-export { authUser, getUserProfile }
+export { authUser, getUserProfile, registerUser }
