@@ -16,5 +16,6 @@ UI:
 ‣ bootswatch.com (Free themes for Bootstrap).
 ‣ font-awesome
 
-Password hash:
-‣ BcryptJS
+Security:
+‣ BcryptJS for password hash.
+‣ JWT
