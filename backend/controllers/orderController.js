@@ -10,7 +10,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
     if (orderItems && orderItems.length === 0) {
         res.status(400).json({ messsage: 'No order items' })
     } else {
-        const order = new Order({ orderItems, paymentMethod, itemsPrice, taxPrice, totalPrice })
+        const order = new Order({ orderItems, user: req.user._id, paymentMethod, itemsPrice, taxPrice, totalPrice })
         const createdOrder = await order.save()
         res.status(201).json({ messsage: 'Order created' })
     }
