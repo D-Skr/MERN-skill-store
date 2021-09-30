@@ -22,3 +22,6 @@ Security:
 
 PayPal:
 ‣ react-paypal-button-v2
+
+You can try it on Heroku:
+https://skillstore2021.herokuapp.com/
