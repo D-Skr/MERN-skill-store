@@ -16,7 +16,6 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <h1>Latest Courses</h1>
             {loading ? <h2>Loading...</h2> : error ? <h3>{error}</h3> :
                 <Row>
                     {products.map(product => (

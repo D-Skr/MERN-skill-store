@@ -19,3 +19,6 @@ UI:
 Security:
 ‣ BcryptJS for password hash.
 ‣ JWT
+
+PayPal:
+‣ react-paypal-button-v2

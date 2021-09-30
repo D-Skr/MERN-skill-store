@@ -21,7 +21,8 @@ const PlaceOrderScreen = ({ history }) => {
     useEffect(() => {
         if (success) {
             history.push(`/order/${order._id}`)
-        } // eslint-disable-next-line
+        }
+        // eslint-disable-next-line
     }, [history, success])
 
     const placeOrderHandler = () => {
@@ -75,7 +76,7 @@ const PlaceOrderScreen = ({ history }) => {
                     <Card>
                         <ListGroup variant='flush'>
                             <ListGroup.Item>
-                                <h2>Order Summury</h2>
+                                <h2>Order Summary</h2>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
@@ -102,7 +103,7 @@ const PlaceOrderScreen = ({ history }) => {
                                 <Button type='button'
                                     className='btn-block'
                                     disabled={cart.cartItems === 0}
-                                    onClick={placeOrderHandler}>Buy</Button>
+                                    onClick={placeOrderHandler}>Pay</Button>
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
